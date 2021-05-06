@@ -1,0 +1,122 @@
+/* mobile vs tablet */
+@media (max-width:1023px){
+    .hide-on-mobile-tablet{
+        display: none;
+    }
+   :root{
+       --height-header:68px;
+       --height-header-with-search:0px;
+   }
+   .header{
+       position:fixed;
+       z-index: 10;
+       right:0;
+       left:0;
+   }
+   .header__cart-icon{
+       padding-right: 0;
+   } 
+   
+   .header__cart-list::before{
+       right:80px;
+   }
+   .header__cart-list{
+        position:fixed;
+        top:var(--height-header);
+        right: 0;
+        width: 100%;
+        padding: 0 calc((100% - 644px) / 2); 
+   }
+   .header__cart-list li{
+       padding-left: 0;
+       padding-right: 0;
+   }
+   .header__cart-list span{
+       padding-left:0;
+       
+   }
+   .header-with-search{
+       margin-top: -6px;
+       margin-left: 0;
+   }
+   .header__sort{
+       display:flex;
+   }
+   .container .grid{
+       margin-top: calc(var(--height-header) + var(--height-header-sort));
+   }
+}
+/* mobile */
+@media (max-width: 739px){
+    .hide-on-mobile{
+        display: none;
+    }
+    .header-with-search{
+        justify-content: space-between;
+        padding:0 16px;
+    }
+    .header__search-input{
+        font-size: 1.2rem;
+    }
+    .header__icon-mobile{
+        display:flex;
+        color:white;
+        font-size: 2rem;
+    }
+    .header__icon-search{
+        padding:0 20px;
+        cursor:pointer;
+    }
+    .header__icon-menu{
+        cursor:pointer;
+    }
+    .header__logo{
+        width:unset;
+        margin:0;
+    }
+    .header__logo a{
+        display:block;
+        line-height: 0;
+    }
+    .header__cart{
+        width:unset;
+    }
+    .header_has-cart--number{
+        right:-10px;
+    }
+    .sidebars-mobile{
+        overflow-y: scroll;
+    }
+    .show-input-search-mobile{
+        display:flex;
+        position:fixed;
+        top:var(--height-header);
+        left: 0;
+        width:100%;
+        z-index: 1;
+        height: var(--height-header-sort);
+        box-shadow: 0 2px 1px #e5e5e5;
+        
+    }
+    .header__search-history{
+        min-width: 200%;
+    }
+    .pagination-item{
+        margin:0;
+    }
+    .pagination-item-link{
+        font-size: 1.4rem;
+        padding:8px 12px;
+    }
+    .grid > .row{
+        margin:2px;
+    }
+    .home-product-item__price-current{
+        margin:0 4px;
+    }
+}
+@media (min-width:740px) and (max-width: 1023px){
+    .hide-on-tablet{
+        display: none;
+    }
+}
